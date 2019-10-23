@@ -19,6 +19,8 @@ alias kittyconfig='$EDITOR $CONFIG/kitty/kitty.conf'
 alias comptonconfig='$EDITOR $CONFIG/compton/compton.conf'
 alias polybarconfig='$EDITOR $CONFIG/polybar/config'
 alias resource='source ~/.bashrc'
+alias pbcopy='xclip -i -selection clipboard'
+alias pbpaste='xclip -o -selection clipboard'
 PS1='[\u@\h \W]\$ '
 
 # Speed up key repeat
