@@ -24,6 +24,7 @@ fi
 
 alias la='ls -A'
 alias ll='la -Al'
+alias grep='grep --color=auto'
 alias bashrc='$EDITOR ~/.bashrc'
 alias vimrc='$EDITOR ~/.vimrc'
 alias resource='source ~/.bashrc'
