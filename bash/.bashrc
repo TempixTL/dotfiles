@@ -29,6 +29,8 @@ alias bashrc='$EDITOR ~/.bashrc'
 alias vimrc='$EDITOR ~/.vimrc'
 alias resource='source ~/.bashrc'
 
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
+
 # Bash prompt
 PS1='\u@\h:\W\$ '
 
