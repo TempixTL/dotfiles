@@ -22,8 +22,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   alias ls='ls -G'
 fi
 
-alias la='ls -a'
-alias ll='la -al'
+alias la='ls -A'
+alias ll='la -Al'
 alias bashrc='$EDITOR ~/.bashrc'
 alias vimrc='$EDITOR ~/.vimrc'
 alias resource='source ~/.bashrc'
