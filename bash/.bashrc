@@ -1,30 +1,35 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 export EDITOR='vim'
-export SYSTEMD_EDITOR=$EDITOR
-export CONFIG=$HOME/.config
 
-alias ls='ls --color=auto'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Execute only on linux systems
+  export SYSTEMD_EDITOR=$EDITOR
+  export CONFIG=$HOME/.config
+  alias ls='ls --color=auto'
+  alias i3config='$EDITOR $CONFIG/i3/config'
+  alias kittyconfig='$EDITOR $CONFIG/kitty/kitty.conf'
+  alias comptonconfig='$EDITOR $CONFIG/compton/compton.conf'
+  alias polybarconfig='$EDITOR $CONFIG/polybar/config'
+  alias pbcopy='xclip -i -selection clipboard'
+  alias pbpaste='xclip -o -selection clipboard'
+
+  # Speed up key repeat
+  xset r rate 250 45
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Execute only on macOS systems
+  alias ls='ls -G'
+fi
+
 alias la='ls -a'
 alias ll='la -al'
 alias bashrc='$EDITOR ~/.bashrc'
 alias vimrc='$EDITOR ~/.vimrc'
-alias i3config='$EDITOR $CONFIG/i3/config'
-alias kittyconfig='$EDITOR $CONFIG/kitty/kitty.conf'
-alias comptonconfig='$EDITOR $CONFIG/compton/compton.conf'
-alias polybarconfig='$EDITOR $CONFIG/polybar/config'
 alias resource='source ~/.bashrc'
-alias pbcopy='xclip -i -selection clipboard'
-alias pbpaste='xclip -o -selection clipboard'
-PS1='[\u@\h \W]\$ '
 
-# Speed up key repeat
-xset r rate 250 45
+# Bash prompt
+PS1='\u@\h:\W\$ '
 
 # rice bois
 neofetch
