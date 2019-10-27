@@ -191,3 +191,7 @@ for_window [class="."] border pixel 0
 
 # Enable gaps
 gaps inner 20
+
+# By default open certain programs on specific workspaces
+assign [class="^firefox$"] number $ws1
+assign [class="^kitty$"] number $ws2

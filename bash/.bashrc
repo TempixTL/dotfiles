@@ -34,5 +34,10 @@ alias resource='source ~/.bashrc'
 # Bash prompt
 PS1='\u@\h:\W\$ '
 
-# rice bois
-neofetch
+if [[ "$OSTYPE" == "linux-gnu" ]] && [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  # Execute only if on linux tty1
+  startx
+else
+  # rice bois
+  neofetch
+fi
