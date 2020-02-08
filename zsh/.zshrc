@@ -2,7 +2,13 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tom/.oh-my-zsh"
+export ZSH="/home/tom/.config/oh-my-zsh"
+
+# Change where command completion cache lives
+export ZSH_COMPDUMP="/home/tom/.cache/zsh/zcompdump-$ZSH_VERSION"
+
+# Change where command history is saved
+export HISTFILE="/home/tom/.cache/zsh/.zsh_history"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -66,9 +72,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# Example format: plugins=(rails git textmate ruby lighthouse
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  screen
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,11 +106,13 @@ alias ll='ls -Al'
 alias grep='grep --color=auto'
 alias zshrc='$EDITOR ~/.zshrc'
 alias resource='source ~/.zshrc'
+alias open='xdg-open'
+alias pbpaste='xclip -o'
+alias pbcopy='xclip -i'
 
 # Other
-
 bindkey -v
-
 xset r rate 250 45
 
+# Rice bois
 neofetch
