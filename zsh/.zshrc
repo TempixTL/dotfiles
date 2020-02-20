@@ -76,7 +76,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  screen
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,6 +104,7 @@ alias la='ls -A'
 alias ll='ls -Al'
 alias grep='grep --color=auto'
 alias zshrc='$EDITOR ~/.zshrc'
+alias awesomerc='$EDITOR ~/.config/awesome/rc.lua'
 alias resource='source ~/.zshrc'
 alias open='xdg-open'
 alias pbpaste='xclip -o'
