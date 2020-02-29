@@ -107,12 +107,11 @@ alias zshrc='$EDITOR ~/.zshrc'
 alias awesomerc='$EDITOR ~/.config/awesome/rc.lua'
 alias resource='source ~/.zshrc'
 alias open='xdg-open'
-alias pbpaste='xclip -o'
-alias pbcopy='xclip -i'
+alias pbpaste='xclip -o -selection clipboard'
+alias pbcopy='xclip -i -selection clipboard'
 
 # Other
 bindkey -v
-xset r rate 250 45
 
 # Rice bois
 neofetch

@@ -13,7 +13,7 @@ hi CursorLineNr term=bold cterm=bold
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
-Plug 'dracula/vim'
+Plug 'dracula/vim', {'as':'dracula'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
