@@ -1,9 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-[[ -d "$HOME/bin" ]] && export PATH=$PATH:$HOME/bin
-export PATH=$PATH:/usr/local/bin
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.config/oh-my-zsh"
 
 # Change where command completion cache lives
 export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
@@ -105,7 +104,6 @@ alias la='ls -A'
 alias ll='ls -Al'
 alias grep='grep --color=auto'
 alias zshrc='$EDITOR ~/.zshrc'
-alias awesomerc='$EDITOR ~/.config/awesome/rc.lua'
 alias resource='source ~/.zshrc'
 alias open='xdg-open'
 alias pbpaste='wl-paste'
@@ -113,6 +111,7 @@ alias pbcopy='wl-copy'
 
 # Other
 bindkey -v
+[[ -f "$HOME/.config/dircolors" ]] && eval `dircolors $HOME/.config/dircolors`
 
 # Rice bois
 neofetch
