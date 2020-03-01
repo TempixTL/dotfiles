@@ -1,14 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+[[ -d "$HOME/bin" ]] && export PATH=$PATH:$HOME/bin
+export PATH=$PATH:/usr/local/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tom/.config/oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Change where command completion cache lives
-export ZSH_COMPDUMP="/home/tom/.cache/zsh/zcompdump-$ZSH_VERSION"
+export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
 
 # Change where command history is saved
-export HISTFILE="/home/tom/.cache/zsh/.zsh_history"
+export HISTFILE="$HOME/.cache/zsh/.zsh_history"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,8 +108,8 @@ alias zshrc='$EDITOR ~/.zshrc'
 alias awesomerc='$EDITOR ~/.config/awesome/rc.lua'
 alias resource='source ~/.zshrc'
 alias open='xdg-open'
-alias pbpaste='xclip -o -selection clipboard'
-alias pbcopy='xclip -i -selection clipboard'
+alias pbpaste='wl-paste'
+alias pbcopy='wl-copy'
 
 # Other
 bindkey -v
