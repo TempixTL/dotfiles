@@ -109,9 +109,15 @@ alias open='xdg-open'
 alias pbpaste='wl-paste'
 alias pbcopy='wl-copy'
 
+# Attempt to locate dircolors
+if [[ -f "$HOME/.dir-colors/dircolors" ]]; then
+  eval `dircolors $HOME/.dir-colors/dircolors`
+else if [[ -f "$HOME/.config/dircolors" ]]; then
+  eval `dircolors $HOME/.config/dircolors`
+fi
+
 # Other
 bindkey -v
-[[ -f "$HOME/.config/dircolors" ]] && eval `dircolors $HOME/.config/dircolors`
 
 # Rice bois
 neofetch
