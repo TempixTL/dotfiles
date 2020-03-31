@@ -105,6 +105,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   alias open='xdg-open'
   alias pbpaste='wl-paste'
   alias pbcopy='wl-copy'
+
+  # Attempt to locate dircolors
+  if [[ -f "$HOME/.dir-colors/dircolors" ]]; then
+    eval `dircolors $HOME/.dir-colors/dircolors`
+  elif [[ -f "$HOME/.config/dircolors" ]]; then
+    eval `dircolors $HOME/.config/dircolors`
+  fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   # Execute only on macOS systems
   alias ls='ls -G'
@@ -117,13 +124,6 @@ alias ll='ls -Al'
 alias grep='grep --color=auto'
 alias zshrc='$EDITOR ~/.zshrc'
 alias resource='source ~/.zshrc'
-
-# Attempt to locate dircolors
-if [[ -f "$HOME/.dir-colors/dircolors" ]]; then
-  eval `dircolors $HOME/.dir-colors/dircolors`
-elif [[ -f "$HOME/.config/dircolors" ]]; then
-  eval `dircolors $HOME/.config/dircolors`
-fi
 
 # zsh syntax highlighting
 if [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
