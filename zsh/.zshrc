@@ -97,23 +97,37 @@ export EDITOR='nvim'
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Execute only on linux systems
+  export SYSTEMD_EDITOR=$EDITOR
+  export CONFIG=$HOME/.config
+  alias ls='ls --color=auto'
+  alias open='xdg-open'
+  alias pbpaste='wl-paste'
+  alias pbcopy='wl-copy'
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  # Execute only on macOS systems
+  alias ls='ls -G'
+fi
+
 alias vim='nvim'
 alias vi='vim'
-alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -Al'
 alias grep='grep --color=auto'
 alias zshrc='$EDITOR ~/.zshrc'
 alias resource='source ~/.zshrc'
-alias open='xdg-open'
-alias pbpaste='wl-paste'
-alias pbcopy='wl-copy'
 
 # Attempt to locate dircolors
 if [[ -f "$HOME/.dir-colors/dircolors" ]]; then
   eval `dircolors $HOME/.dir-colors/dircolors`
 elif [[ -f "$HOME/.config/dircolors" ]]; then
   eval `dircolors $HOME/.config/dircolors`
+fi
+
+# zsh syntax highlighting
+if [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 # Other
