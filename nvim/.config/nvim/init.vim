@@ -1,14 +1,12 @@
 filetype plugin on
 set number relativenumber
 set autoindent
+hi CursorLineNr term=bold cterm=bold 
 
-" Spaces over tabs for life
+" spaces over tabs for life
 set expandtab
 set tabstop=2
 set shiftwidth=2
-
-" Smol visual change
-hi CursorLineNr term=bold cterm=bold 
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
