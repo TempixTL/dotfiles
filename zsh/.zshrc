@@ -22,14 +22,14 @@ bindkey -v # vim movement keybings
 
 # user config
 export LANG=en_US.UTF-8
-export EDITOR='nvim'
+export EDITOR="nvim"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then # linux only
-  export SYSTEMD_EDITOR=$EDITOR
-  export CONFIG=$HOME/.config
-  alias ls='ls --color=auto'
-  alias open='xdg-open'
-  alias pbpaste='wl-paste'
-  alias pbcopy='wl-copy'
+  export SYSTEMD_EDITOR="$EDITOR"
+  export CONFIG="$HOME/.config"
+  alias ls="ls --color=auto"
+  alias open="xdg-open"
+  alias pbpaste="wl-paste"
+  alias pbcopy="wl-copy"
 
   # attempt to locate dircolors
   if [[ -f "$HOME/.dir-colors/dircolors" ]]; then
@@ -38,22 +38,28 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then # linux only
     eval `dircolors $HOME/.config/dircolors`
   fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then # macos only
-  alias ls='ls -G'
+  alias ls="ls -G"
 fi
 
-alias vim='nvim'
-alias vi='vim'
-alias la='ls -A'
-alias ll='ls -Al'
-alias grep='grep --color=auto'
-alias zshrc='$EDITOR ~/.zshrc'
-alias resource='source ~/.zshrc'
+exists() {
+  command -v "$1" &> /dev/null
+}
 
-if type jenv > /dev/null; then # if jenv is installed
+if exists vim; then alias vi="vim"; fi
+if exists nvim; then alias vim="nvim"; fi
+alias la="ls -A"
+alias ll="ls -Al"
+alias grep="grep --color=auto"
+alias zshrc="$EDITOR ~/.zshrc"
+alias resource="source ~/.zshrc"
+
+if exists jenv; then
  export PATH="$HOME/.jenv/bin:$PATH"
  eval "$(jenv init -)"
 fi
 
-if type neofetch > /dev/null && [[ "$TERM_PROGRAM" != "vscode" ]]; then
+if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
   neofetch # pretty colors
 fi
+
+unset -f exists
