@@ -51,6 +51,7 @@ alias la="ls -A"
 alias ll="ls -Al"
 alias grep="grep --color=auto"
 alias zshrc="$EDITOR ~/.zshrc"
+alias vimrc="$EDITOR ~/.vimrc"
 alias resource="source ~/.zshrc"
 
 if exists jenv; then
