@@ -1,4 +1,4 @@
-filetype plugin on
+set nocompatible
 set number relativenumber
 set autoindent
 hi CursorLineNr term=bold cterm=bold 
@@ -24,3 +24,5 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 call plug#end()
+
+filetype plugin indent on
