@@ -1,7 +1,6 @@
 set nocompatible
 set number
 set autoindent
-hi CursorLineNr term=bold cterm=bold 
 
 " spaces over tabs for life
 set expandtab
