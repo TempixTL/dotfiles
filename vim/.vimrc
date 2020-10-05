@@ -1,5 +1,5 @@
 set nocompatible
-set number relativenumber
+set number
 set autoindent
 hi CursorLineNr term=bold cterm=bold 
 
