@@ -7,6 +7,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+" enable spell check for Markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+
 " vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
