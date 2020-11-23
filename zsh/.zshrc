@@ -20,7 +20,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 bindkey -v # vim movement keybings
 
-# user config
+# os-specific config
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then # linux only
@@ -41,6 +41,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then # macos only
   alias ls="ls -G"
 fi
 
+# aliases
 exists() {
   command -v "$1" &> /dev/null
 }
