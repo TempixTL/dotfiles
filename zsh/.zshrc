@@ -52,12 +52,6 @@ alias zshrc="$EDITOR ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias resource="source ~/.zshrc"
 
-if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  neofetch # pretty colors
-fi
-
-unset -f exists
-
 # functions
 
 mkcd() {
@@ -72,3 +66,11 @@ mkcd() {
   cd "$dir" && \
   pwd
 }
+
+# other
+
+if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  neofetch # pretty colors
+fi
+
+unset -f exists
