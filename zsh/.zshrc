@@ -52,11 +52,6 @@ alias zshrc="$EDITOR ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias resource="source ~/.zshrc"
 
-if exists jenv; then
- export PATH="$HOME/.jenv/bin:$PATH"
- eval "$(jenv init -)"
-fi
-
 if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
   neofetch # pretty colors
 fi
@@ -66,6 +61,7 @@ unset -f exists
 # functions
 
 mkcd() {
+  # makes a directory structure and cd's into it
   if [ $# -ne 1 ]; then
     echo "usage: $0 dir"
     exit 1
