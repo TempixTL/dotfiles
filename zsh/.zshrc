@@ -46,6 +46,7 @@ exists() {
   command -v "$1" &> /dev/null
 }
 
+alias sudo="sudo "
 if exists vim; then alias vi="vim"; fi
 if exists nvim; then alias vim="nvim"; fi
 alias la="ls -A"
