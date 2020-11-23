@@ -65,3 +65,17 @@ if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
 fi
 
 unset -f exists
+
+# functions
+
+mkcd() {
+  if [ $# -ne 1 ]; then
+    echo "usage: $0 dir"
+    exit 1
+  fi
+
+  dir="$1"
+  mkdir -p "$dir" && \
+  cd "$dir" && \
+  pwd
+}
