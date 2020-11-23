@@ -13,10 +13,6 @@ plugins=(
   git
 )
 
-if [[ -f "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
-  source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # syntax highlighting
-fi
-
 source $ZSH/oh-my-zsh.sh
 bindkey -v # vim movement keybings
 
