@@ -29,7 +29,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+" plugin settings
+let g:airline_theme='dracula'
+let g:airline#extensions#tabline#enabled = 1
 
 filetype plugin indent on
