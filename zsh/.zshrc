@@ -18,7 +18,7 @@ bindkey -v # vim movement keybings
 
 # os-specific config
 export LANG=en_US.UTF-8
-export EDITOR="nvim"
+export EDITOR="vim"
 if [[ "$OSTYPE" == "linux-gnu" ]]; then # linux only
   export SYSTEMD_EDITOR="$EDITOR"
   export CONFIG="$HOME/.config"
@@ -43,8 +43,6 @@ exists() {
 }
 
 alias sudo="sudo "
-if exists vim; then alias vi="vim"; fi
-if exists nvim; then alias vim="nvim"; fi
 alias la="ls -A"
 alias ll="ls -Al"
 alias grep="grep --color=auto"
