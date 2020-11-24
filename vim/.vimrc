@@ -1,15 +1,20 @@
+" general
 set nocompatible
 set mouse=a
 set number
-set autoindent
+set relativenumber
 
-" spaces over tabs for life
+" indentation
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set autoindent
+set smartindent
 
-" enable spell check for Markdown files
+" spellcheck
 autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
+set complete+=kspell
 
 " vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
