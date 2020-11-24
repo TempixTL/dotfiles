@@ -36,6 +36,8 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " plugin settings
+syntax enable
+colorscheme dracula
 let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 set updatetime=100
