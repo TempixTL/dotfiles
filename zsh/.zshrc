@@ -48,6 +48,7 @@ alias ll="ls -Al"
 alias grep="grep --color=auto"
 alias zshrc="$EDITOR ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
+alias vime="vim -c Explore"
 alias resource="source ~/.zshrc"
 
 # functions
