@@ -73,3 +73,9 @@ if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
 fi
 
 unset -f exists
+
+# source system-specific config, if it exists
+zshrc_ext="$HOME/.zshrc-ext"
+if [ -f "$zshrc_ext" ]; then
+  source "$zshrc_ext"
+fi
