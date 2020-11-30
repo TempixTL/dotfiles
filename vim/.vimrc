@@ -42,5 +42,6 @@ colorscheme dracula
 let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 set updatetime=100
+let g:vim_markdown_folding_disabled = 1
 
 filetype plugin indent on
