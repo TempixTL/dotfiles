@@ -1,9 +1,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # omz config
-export ZSH="$HOME/.config/oh-my-zsh"
-export ZSH_COMPDUMP="$HOME/.cache/zsh/zcompdump-$ZSH_VERSION"
-export HISTFILE="$HOME/.cache/zsh/.zsh_history"
 ZSH_THEME="robbyrussell"
 DISABLE_UPDATE_PROMPT="true" # auto update without prompt
 export UPDATE_ZSH_DAYS=30
@@ -13,7 +10,7 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 bindkey -v # vim movement keybings
 
 # os-specific config
