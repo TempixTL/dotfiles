@@ -32,7 +32,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'glench/vim-jinja2-syntax'
+Plug 'niftylettuce/vim-jinja'
 
 call plug#end()
 
@@ -42,6 +42,6 @@ colorscheme dracula
 let g:airline_theme='dracula'
 let g:airline#extensions#tabline#enabled = 1
 set updatetime=100
-let g:vim_markdown_folding_disabled = 1
+let g:airline_powerline_fonts=1
 
 filetype plugin indent on
