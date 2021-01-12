@@ -1,0 +1,10 @@
+sessionname 11ty
+source common.screenrc
+screen -t "editor" 0 vim -c Explore
+split -v
+focus
+screen -t "server" 1 npx eleventy --serve
+split
+focus
+screen
+focus

@@ -1,0 +1,10 @@
+sessionname rails
+source common.screenrc
+
+screen -t "editor" 0 vim -c Explore
+split -v
+focus
+screen -t "server" rails server
+split
+focus
+screen
