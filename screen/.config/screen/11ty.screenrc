@@ -1,5 +1,7 @@
 sessionname 11ty
 source common.screenrc
+
+# layout
 screen -t "editor" 0 vim -c Explore
 split -v
 focus
@@ -8,3 +10,5 @@ split
 focus
 screen
 focus
+
+layout save 11ty
