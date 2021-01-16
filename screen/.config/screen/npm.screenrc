@@ -1,14 +1,14 @@
-sessionname 11ty
+sessionname npm
 source common.screenrc
 
 # layout
 screen -t "editor" 0 vim -c Explore
 split -v
 focus
-screen -t "server" 1 npx eleventy --serve
+screen npm start
 split
 focus
 screen
 focus
 
-layout save 11ty
+layout save npm
