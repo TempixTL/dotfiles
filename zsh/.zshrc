@@ -35,9 +35,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then # macos only
 fi
 
 # aliases
-exists() {
-  command -v "$1" &> /dev/null
-}
 
 alias sudo="sudo "
 alias la="ls -A"
@@ -62,14 +59,6 @@ mkcd() {
   cd "$dir" && \
   pwd
 }
-
-# other
-
-if exists neofetch && [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  neofetch # pretty colors
-fi
-
-unset -f exists
 
 # source system-specific config, if it exists
 zshrc_ext="$HOME/.zshrc-ext"
